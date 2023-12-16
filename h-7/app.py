@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/h7', methods=['GET'])
-def get_data():
+def fn_get_data():
     email = request.args.get('email')
     name = request.args.get('name')
     if email is None or name is None:

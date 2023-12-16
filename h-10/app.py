@@ -5,7 +5,7 @@ app = Flask(__name__)
 alias_list = ["foo", "bar", "baz", "qux", "fred"]
 
 @app.route('/h10', methods=['POST'])
-def check_alias():
+def fn_check_alias():
     alias = request.json.get('alias')
     
     if alias in alias_list:

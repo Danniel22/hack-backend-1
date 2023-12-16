@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/h8', methods=['POST'])
-def post_endpoint():
+def fn_post_endpoint():
     data = request.get_json()  
     email = data.get('email')
     name = data.get('name')

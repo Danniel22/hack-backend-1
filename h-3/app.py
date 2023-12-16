@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/h3', methods=['PUT'])
-def put_method():
+def fn_Put():
     if request.method == 'PUT':
         return jsonify({"payload":"put"}), 200
 

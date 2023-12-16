@@ -5,7 +5,7 @@ app = Flask(__name__)
 alias_list = ["foo", "bar", "baz", "qux", "fred"]
 
 @app.route('/h9', methods=['GET'])
-def get_alias():
+def fn_get_alias():
     alias = request.args.get('alias')
     if alias in alias_list:
         return jsonify({

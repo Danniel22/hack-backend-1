@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/h2', methods=['POST'])
-def post_example():
+def fn_Post():
     if request.is_json:
         return jsonify({"payload":"post"}), 200
     else:
